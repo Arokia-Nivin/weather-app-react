@@ -2,6 +2,8 @@
 
 # Weather React App 
 
+This Weather App is made with React-Redux. 
+
 ## Available Scripts
 
 In the project directory, you can run:
