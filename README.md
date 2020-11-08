@@ -4,6 +4,10 @@
 
 This Weather App is made with React-Redux and uses Redux-thunk as the middleware. 
 
+## View Live App at 
+
+<a href="https://arokianivin09.github.io/weather-react-app/">:octocat: Weather App :octocat:</a> 
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -20,7 +24,5 @@ Creates a production build of the application which can be deployed to any stati
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-## View Live App at 
 
-<a href="https://arokianivin09.github.io/weather-react-app/">:octocat: Weather App :octocat:</a> 
 
