@@ -11,7 +11,6 @@ export const fetchWeatherData = (placeName) => async (dispatch) => {
         },
       },
     );
-    console.log(res.data);
     const { main, weather, name, wind } = res.data;
     const action = {
       main,
