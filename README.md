@@ -1,5 +1,6 @@
 <div align="center">
 
+# Weather React App 
 
 ## Available Scripts
 
@@ -17,6 +18,6 @@ Creates a production build of the application which can be deployed to any stati
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-## View Live App at
+## View Live App at 
 
-<a href="https://arokianivin09.github.io/weather-react-app/"><img src="https://cdn3.vectorstock.com/i/thumb-large/17/42/github-vector-12281742.jpg"></a>
+<a href="https://arokianivin09.github.io/weather-react-app/"><img src="https://cdn.iconscout.com/icon/free/png-256/github-45-434165.png"></a>
