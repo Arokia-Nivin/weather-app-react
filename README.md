@@ -23,4 +23,5 @@ You will also see any lint errors in the console.
 ## View Live App at 
 
 <a href="https://arokianivin09.github.io/weather-react-app/">:octocat:</a> 
+<a href="https://arokianivin09.github.io/weather-react-app/">Weather App</a> 
 
