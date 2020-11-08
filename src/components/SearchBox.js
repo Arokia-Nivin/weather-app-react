@@ -12,16 +12,15 @@ class SearchBox extends Component {
       this.refs.SearchBoxInput,
     );
     placeNameAutoComplete.setFields(["place_id"]);
-    this.setupPlaceChangedListener(placeNameAutoComplete);
+    this.PlaceChangedListener(placeNameAutoComplete);
   }
 
-  setupPlaceChangedListener = (autocomplete) => {
+  PlaceChangedListener = (autocomplete) => {
     autocomplete.addListener("place_changed", () => {
       const place = autocomplete.getPlace();
       if (!place.place_id) {
         this.setState({ placeName: "" });
         window.alert("Please select an option from the dropdown list");
-        return;
       } else {
         this.setState({
           placeName: autocomplete.gm_accessors_.place.se.formattedPrediction,
@@ -34,7 +33,7 @@ class SearchBox extends Component {
     this.setState({ [evt.target.name]: evt.target.value });
   };
 
-  handleSubmit = async (evt) => {
+  handleOnSubmit = async (evt) => {
     evt.preventDefault();
     let { placeName } = this.state;
     if (!placeName) return;
@@ -50,7 +49,9 @@ class SearchBox extends Component {
           },
         },
       );
-      console.log(res);
+      let { main, weather, coord } = res.data;
+      console.log(main, coord);
+      for (let i of weather) console.log(i);
     } catch (e) {
       console.error(e);
       window.alert("An error occured ... Please Enter a Valid City Name");
@@ -59,7 +60,7 @@ class SearchBox extends Component {
 
   render() {
     return (
-      <form className='SearchBox' onSubmit={this.handleSubmit}>
+      <form className='SearchBox' onSubmit={this.handleOnSubmit}>
         <label htmlFor='SearchBox-input'>City Name</label>
         <input
           type='text'
