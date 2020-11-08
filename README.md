@@ -22,4 +22,3 @@ You will also see any lint errors in the console.
 
 <a href="https://arokianivin09.github.io/weather-react-app/"><img src="https://cdn.iconscout.com/icon/free/png-256/github-45-434165.png"></a>
 
-Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
