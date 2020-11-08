@@ -2,7 +2,7 @@
 
 # Weather React App 
 
-This Weather App is made with React-Redux. 
+This Weather App is made with React-Redux and uses Redux-thunk as the middleware. 
 
 ## Available Scripts
 
