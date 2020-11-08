@@ -1,0 +1,22 @@
+.Weather {
+  color: #023e8a;
+}
+.Weather-icon {
+  width: 23%;
+}
+.Weather-notification {
+  margin-top: 10% !important;
+  font-size: larger !important;
+}
+.Weather-data {
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+::selection {
+  color: white;
+  background: #023e8a;
+}

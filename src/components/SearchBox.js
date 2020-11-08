@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { fetchWeatherData } from "../actions/";
 import "../styles/SearchBox.css";
-import axios from "axios";
 class SearchBox extends Component {
   constructor(props) {
     super(props);
@@ -39,42 +40,35 @@ class SearchBox extends Component {
     if (!placeName) return;
     let indexOfComma = placeName.indexOf(",");
     placeName = placeName.slice(0, indexOfComma);
-    try {
-      const res = await axios.get(
-        "http://api.openweathermap.org/data/2.5/weather",
-        {
-          params: {
-            q: placeName,
-            appid: "2f662e3cc2306047524dd030b5222fdf",
-          },
-        },
-      );
-      let { main, weather, coord } = res.data;
-      console.log(main, coord);
-      for (let i of weather) console.log(i);
-    } catch (e) {
-      console.error(e);
-      window.alert("An error occured ... Please Enter a Valid City Name");
-    }
+    await this.props.fetchWeatherData(placeName);
+    this.setState({ placeName: "" });
   };
 
   render() {
     return (
-      <form className='SearchBox' onSubmit={this.handleOnSubmit}>
-        <label htmlFor='SearchBox-input'>City Name</label>
-        <input
-          type='text'
-          name='placeName'
-          id='SearchBox-input'
-          ref='SearchBoxInput'
-          placeholder='Enter the City'
-          className='SearchBox-input'
-          value={this.state.placeName}
-          onInput={this.handleOnChange}
-        />
+      <form onSubmit={this.handleOnSubmit}>
+        <div className='form-group row'>
+          <label
+            className='SearchBox-input-label col-sm-3 col-form-label font-weight-bold'
+            htmlFor='SearchBox-input'>
+            City Name:
+          </label>
+          <div className='col-sm-9'>
+            <input
+              type='text'
+              name='placeName'
+              id='SearchBox-input'
+              ref='SearchBoxInput'
+              placeholder='Enter your City Name'
+              className='form-control'
+              value={this.state.placeName}
+              onChange={this.handleOnChange}
+            />
+          </div>
+        </div>
       </form>
     );
   }
 }
 
-export default SearchBox;
+export default connect(null, { fetchWeatherData })(SearchBox);
