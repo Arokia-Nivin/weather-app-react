@@ -18,4 +18,4 @@ You will also see any lint errors in the console.
 
 ## View Live App at
 
-<a href="https://arokianivin09.github.io/weather-react-app/"><img src="https://www.kindpng.com/picc/m/141-1419051_github-icon-png-transparent-png.png"></a>
+<a href="https://arokianivin09.github.io/weather-react-app/"><img src="https://www.i-programmer.info/images/stories/News/2016/July/A/githubbanner.JPG"></a>
