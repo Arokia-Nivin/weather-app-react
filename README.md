@@ -4,7 +4,7 @@
 
 This Weather App is made with React-Redux and uses Redux-thunk as the middleware. 
 
-## View Live App at 
+# View Live App at 
 
 ## <a href="https://arokianivin09.github.io/weather-react-app/">:octocat: Weather React App :octocat:</a> 
 
