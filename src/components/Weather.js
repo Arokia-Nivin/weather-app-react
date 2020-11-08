@@ -11,7 +11,9 @@ class Weather extends Component {
     ) {
       return (
         <h1 className='Weather-notification badge badge-dark py-3'>
-          ENTER YOUR CITY NAME
+          <i class='fas fa-cloud-moon'></i>
+          {"    "}Enter Your City Name{"    "}
+          <i class='fas fa-cloud-sun-rain'></i>
         </h1>
       );
     }

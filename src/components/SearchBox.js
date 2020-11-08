@@ -45,13 +45,14 @@ class SearchBox extends Component {
   };
 
   render() {
+    const icon = <i class='fas fa-search'></i>;
     return (
       <form onSubmit={this.handleOnSubmit}>
         <div className='form-group row'>
           <label
             className='SearchBox-input-label col-sm-3 col-form-label font-weight-bold'
             htmlFor='SearchBox-input'>
-            City Name:
+            City Name: {icon}
           </label>
           <div className='col-sm-9'>
             <input
@@ -59,7 +60,7 @@ class SearchBox extends Component {
               name='placeName'
               id='SearchBox-input'
               ref='SearchBoxInput'
-              placeholder='Enter your City Name'
+              placeholder='Enter Your City Name'
               className='form-control'
               value={this.state.placeName}
               onChange={this.handleOnChange}
