@@ -2,7 +2,7 @@
 
 # Weather React App 
 
-This Weather App is made with React-Redux and uses Redux-thunk as the middleware and integrated with Google places Api 
+This Weather App is made with React-Redux and uses Redux-thunk as the middleware and integrated with Google Places API.
 
 # View Live App at 
 
