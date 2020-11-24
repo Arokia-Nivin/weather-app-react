@@ -24,7 +24,7 @@ class SearchBox extends Component {
         window.alert("Please select an option from the dropdown list");
       } else {
         this.setState({
-          placeName: autocomplete.gm_accessors_.place.se.formattedPrediction,
+          placeName: autocomplete.gm_accessors_.place.qe.formattedPrediction,
         });
       }
     });
