@@ -11,13 +11,13 @@ class Weather extends Component {
     ) {
       return (
         <h1 className='Weather-notification badge badge-dark py-3'>
-          <i class='fas fa-cloud-moon'></i>
+          <i className='fas fa-cloud-moon'></i>
           {"    "}Enter Your City Name{"    "}
-          <i class='fas fa-cloud-sun-rain'></i>
+          <i className='fas fa-cloud-sun-rain'></i>
         </h1>
       );
     }
-    const iconurl = `http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
+    const iconurl = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
     return (
       <div className='Weather'>
         <div>

@@ -3,6 +3,6 @@ export const weatherDataReducer = (state = {}, action) => {
     case "FETCH_WEATHER_DATA":
       return { ...action.payload };
     default:
-      return state;
+      return state; 
   }
 };

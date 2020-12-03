@@ -4,22 +4,22 @@
   font-size: larger;
   outline: none !important;
   border: none !important ;
-  color: #023e8a;
+  color:#1a535c;
   margin-left: auto;
 }
 .SearchBox-input-label {
-  color: #023e8a;
+  color: #1a535c;
   font-size: 1.3rem !important;
 }
 #SearchBox-input::placeholder {
-  color: #023e8a;
+  color: #1a535c;
   opacity: 1;
 }
 
 #SearchBox-input:-ms-input-placeholder {
-  color: #023e8a;
+  color: #1a535c;
 }
 
 #SearchBox-input::-ms-input-placeholder {
-  color: #023e8a;
+  color: #1a535c;
 }

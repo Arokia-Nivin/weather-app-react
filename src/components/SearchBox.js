@@ -12,40 +12,37 @@ class SearchBox extends Component {
     const placeNameAutoComplete = new window.google.maps.places.Autocomplete(
       this.refs.SearchBoxInput,
     );
-    placeNameAutoComplete.setFields(["place_id"]);
+    placeNameAutoComplete.setFields(["formatted_address"]);
     this.PlaceChangedListener(placeNameAutoComplete);
   }
 
   PlaceChangedListener = (autocomplete) => {
     autocomplete.addListener("place_changed", () => {
-      const place = autocomplete.getPlace();
-      if (!place.place_id) {
-        this.setState({ placeName: "" });
-        window.alert("Please select an option from the dropdown list");
+      let placeName = autocomplete.getPlace().formatted_address;
+      if (!placeName) {
+        this.setState(() => ({ placeName: "" }));
+        this.props.fetchWeatherData("");
       } else {
-        this.setState({
-          placeName: autocomplete.gm_accessors_.place.qe.formattedPrediction,
+        this.setState(() => ({ placeName }));
+        let indexOfComma = placeName.indexOf(",");
+        placeName = placeName.slice(0, indexOfComma);
+        this.props.fetchWeatherData(placeName).then(() => {
+          this.setState(() => ({ placeName: "" }));
         });
       }
     });
   };
 
   handleOnChange = (evt) => {
-    this.setState({ [evt.target.name]: evt.target.value });
+    this.setState(() => ({ [evt.target.name]: evt.target.value }));
   };
 
-  handleOnSubmit = async (evt) => {
+  handleOnSubmit = (evt) => {
     evt.preventDefault();
-    let { placeName } = this.state;
-    if (!placeName) return;
-    let indexOfComma = placeName.indexOf(",");
-    placeName = placeName.slice(0, indexOfComma);
-    await this.props.fetchWeatherData(placeName);
-    this.setState({ placeName: "" });
   };
 
   render() {
-    const icon = <i class='fas fa-search'></i>;
+    const icon = <i className='fas fa-search'></i>;
     return (
       <form onSubmit={this.handleOnSubmit}>
         <div className='form-group row'>
